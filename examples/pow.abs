@@ -1,2 +1,0 @@
-echo("10 power of 10 is:")
-echo(10 ** 10)

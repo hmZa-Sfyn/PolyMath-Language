@@ -1,0 +1,2 @@
+# Call me `PLOYMATH example.PLOYMATH --example some_value`
+echo(flag("example"))

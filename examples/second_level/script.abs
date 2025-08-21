@@ -1,5 +1,0 @@
-hello = require("./hello_module.abs")
-
-return f() {
-    return hello
-}
