@@ -1,0 +1,12 @@
+## PLOYMATH init script ~/.absrc
+
+## For interactive REPL, override default prompt, history filename and size
+# if POLYMATH_INTERACTIVE {
+#     POLYMATH_PROMPT_LIVE_PREFIX = true
+#     POLYMATH_PROMPT_PREFIX = "{user}@{host}:{dir}$ "
+#     POLYMATH_HISTORY_FILE = "~/.POLYMATH_history"
+#     POLYMATH_MAX_HISTORY_LINES = 1000
+# }
+
+## source your function libraries here
+# source("/path/to/abs/lib/library.abs")
