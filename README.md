@@ -1,6 +1,6 @@
 
 
-# The polymath programming language
+# The polymath programming language V1
 
 PLOYMATH is a programming language that works best when you're scripting on
 your terminal. It tries to combine the elegance of languages
@@ -69,7 +69,7 @@ iwr -useb https://raw.githubusercontent.com/hmZa-Sfyn/PolyMath-Language/refs/hea
 ```
 
 ```
-$ polymath script.pms
+$ polymath1 script.pms
 ```
 
 ## Installation
@@ -77,13 +77,14 @@ $ polymath script.pms
 The easiest way is to:
 
 ``` bash
-bash <(curl https://polymathlang.vercel.app/installer.sh)
+#IN WINDOWS
+iwr -useb https://raw.githubusercontent.com/hmZa-Sfyn/PolyMath-Language/refs/heads/main/install.ps1 | iex
 ```
 
 then you can:
 
 ``` bash
-$ polymath path/to/scripts.pms
+$ polymath1 path/to/scripts.pms
 ```
 
 ## Documentation
