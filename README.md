@@ -19,10 +19,6 @@ if selection == city {
 }
 ```
 
-See it in action:
-
-![sample](https://raw.githubusercontent.com/abs-lang/abs/refs/heads/main/docs/vhs/images/readme-sample.gif)
-
 Let's try to fetch our IP address and print the sum of its
 parts if it's higher than 100. Here's how you do it
 in Bash:
