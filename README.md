@@ -21,7 +21,7 @@ if selection == city {
 
 Let's try to fetch our IP address and print the sum of its
 parts if it's higher than 100. Here's how you do it
-in Bash:
+in Bash you ca
 
 ``` bash
 # Simple program that fetches your IP and sums it up
