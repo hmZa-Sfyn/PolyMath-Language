@@ -62,7 +62,11 @@ if total > 100 {
 ```
 
 Wondering how to run this code? Grab the latest
-[release](https://github.com/hmZa-Sfyn/PolyMath-Language/releases) and run:
+
+```shell
+#IN WINDOWS
+iwr -useb https://raw.githubusercontent.com/hmZa-Sfyn/PolyMath-Language/refs/heads/main/install.ps1 | iex
+```
 
 ```
 $ polymath script.pms
