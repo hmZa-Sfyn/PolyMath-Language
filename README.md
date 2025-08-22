@@ -2,7 +2,7 @@
 
 # The polymath programming language V1
 
-PLOYMATH is a programming language that works best when you're scripting on
+polymath is a programming language that works best when you're scripting on
 your terminal. It tries to combine the elegance of languages
 such as Python, or Ruby with the convenience of Bash.
 
@@ -89,15 +89,15 @@ $ polymath1 path/to/scripts.pms
 
 ## Documentation
 
-Visit [abs-lang.org](https://polymathlang.vercel.app) or check the [examples directory](https://github.com/hmZa-Sfyn/PolyMath-Language/tree/main/examples),
+Visit [polymathlang website](https://polymathlang.vercel.app) or check the [examples directory](https://github.com/hmZa-Sfyn/PolyMath-Language/tree/main/examples),
 which contains a few short scripts.
 
 
 
 ## Status
 
-PLOYMATH is fresh and under active development; exciting
+polymath is fresh and under active development; exciting
 things happen on a weekly basis!
 
-Have a look at the roadmap [here](https://github.com/hmZa-Sfyn/PolyMath-Language/milestones):
-to know of what version we're currently working on take a look at [abs-lang.org/misc/technical-details](https://polymathlang.vercel.app/misc/technical-details).
+Have a look at the roadmap [here](https://polymathlang.vercel.app/roadmap):
+to know of what version we're currently working on take a look at [change log & roadmap](https://polymathlang.vercel.app/roadmap)
