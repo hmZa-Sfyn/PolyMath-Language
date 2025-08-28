@@ -6,59 +6,92 @@ polymath is a programming language that works best when you're scripting on
 your terminal. It tries to combine the elegance of languages
 such as Python, or Ruby with the convenience of Bash.
 
-``` bash
-tz = `cat /etc/timezone`
-continent, city = tz.split("/")
+``` bash 
+#!/usr/bin/env abs
+cli = require('@cli')
 
-echo("Best city in the world?")
+res = {"count": 0}
 
-selection = stdin()
-
-if selection == city {
-  echo("You might be biased...")
+@cli.cmd("count", "prints a counter", {})
+f counter(arguments, flags) {
+    echo(res.count)
 }
+
+@cli.cmd("incr", "Increment our counter", {})
+f incr(arguments, flags) {
+    res.count += 1
+    return "ok"
+}
+
+@cli.cmd("incr_by", "Increment our counter", {})
+f incr_by(arguments, flags) {
+    echo("Increment by how much?")
+    n = stdin().number()
+    res.count += n
+    return "ok"
+}
+
+cli.repl()
+
 ```
 
-Let's try to fetch our IP address and print the sum of its
-parts if it's higher than 100. Here's how you do it
-in Bash you can do:
-
 ``` bash
-# Simple program that fetches your IP and sums it up
-RES=$(curl -s 'https://api.ipify.org?format=json' || "ERR")
+# ... is a special "keyword" to identify
+# the arguments passed to the current function
 
-if [ "$RES" = "ERR" ]; then
-    echo "An error occurred"
-    exit 1
-fi
+f breakline() {
+    echo("--------")
+}
 
-IP=$(echo $RES | jq -r ".ip")
-IFS=. read first second third fourth <<EOF
-${IP##*-}
-EOF
+f f1() {
+    echo(...)
+}
 
-total=$((first + second + third + fourth))
-if [ $total -gt 100 ]; then
-    echo "The sum of [$IP] is a large number, $total."
-fi
+f1("hello %s", "world")
+
+breakline()
+
+f f2() {
+    echo(....len())
+}
+
+f2(1,2,3,4,5)
+
+breakline()
+
+f f3() {
+    echo(sum(... + [1]))
+}
+
+f3(1)
+
+breakline()
+
+f f4() {
+    for arg in ... {
+        echo(arg)
+    }
+}
+
+f4(1,2,3,4,5)
+
 ```
 
-And here's the same code in PolyMath:
+``` bash
+ip = `curl -s 'https://api.ipify.org?format=json' | jq -rj ".ip"`
+echo("your ip is " + ip)
+```
+
+Basic pipe stuff!
 
 ``` bash
-# Simple program that fetches your IP and sums it up
-res = `curl -s 'https://api.ipify.org?format=json'`
+a = "1.2.3.4.5.6.7"
+     | split(".") 
+     | map(int)
+     | map(f(x) {x * 10})
 
-if !res.ok {
-  echo("An error occurred: %s", res)
-  exit(1)
-}
+echo(a)
 
-ip = res.json().ip
-total = ip.split(".").map(int).sum()
-if total > 100 {
-    echo("The sum of [$ip] is a large number, $total.")
-}
 ```
 
 Wondering how to run this code? Grab the latest
